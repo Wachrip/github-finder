@@ -9,8 +9,7 @@ const User = ({user, loading, getUser, getUserRepos, repos, match}) => {
     getUser(match.params.login)
     getUserRepos(match.params.login)
     // eslint-disable-next-line
-  }, [getUser, getUserRepos, match.params.login])
-
+  }, [])
     const { name, avatar_url, location, bio, blog, login, html_url, followers, following, public_repos, public_gists, hireable, company} = user
 
     if(loading) return <Spinner />
